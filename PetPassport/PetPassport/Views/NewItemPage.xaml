@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PetPassport.Views.NewItemPage"
+             Title="Форма створення">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Відмінити" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Зберегти" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Кличка домашньої тварини" FontSize="Medium" />
+            <Entry Text="{Binding Item.Name}" FontSize="Small" />
+            <Label Text="Вид домашньої тварини" FontSize="Medium" />
+            <Entry Text="{Binding Item.Kind}" FontSize="Small" Margin="0" />
+            <Label Text="Дата народження" FontSize="Medium" />
+            <DatePicker Format="D" DateSelected="datePicker_DateSelected">
+                <DatePicker.MaximumDate>6/01/2020</DatePicker.MaximumDate>
+            </DatePicker>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

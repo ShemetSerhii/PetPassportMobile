@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PetPassport.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+    <ScrollView>
+        <StackLayout x:Name="stack" Spacing="20" Padding="15">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Кличка:" FontSize="Medium" />
+                <Label Text="{Binding Item.Name}" d:Text="Item name" FontSize="Medium"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Вид:" FontSize="Medium" />
+                <Label Text="{Binding Item.Kind}" d:Text="Item description" FontSize="Medium"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Дата народження:" FontSize="Medium" />
+                <Label Text="{Binding Item.DateOfBirth}" d:Text="Item description" FontSize="Medium"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

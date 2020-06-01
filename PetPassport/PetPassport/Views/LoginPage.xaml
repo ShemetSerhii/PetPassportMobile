@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PetPassport.Views.LoginPage">
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Ввійдіть в систему" FontSize="Medium" HorizontalTextAlignment="Center" />
+            <Label Text="Електронна пошта" FontSize="Medium" />
+            <Entry x:Name="Email" FontSize="Small" />
+            <Label Text="Пароль" FontSize="Medium" />
+            <Entry x:Name="Password" IsPassword="true"  FontSize="Small" Margin="0" />
+            <Label x:Name="Error" FontSize="Small"></Label>
+            <Button Text = "Увійти" FontSize="Large" BorderWidth="1" 
+                    HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
